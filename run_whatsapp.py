@@ -1,4 +1,3 @@
-
 from channels.whatsapp_bot import run
 
 if __name__ == "__main__":

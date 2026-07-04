@@ -12,6 +12,7 @@ try:
     import config
 except ImportError:
     import os
+
     sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     from core import bot_engine
     import config
@@ -39,8 +40,10 @@ def whatsapp():
 
 def run(port=None):
     port = port or config.WHATSAPP_PORT
-    print(f"[whatsapp] Servidor Flask em http://0.0.0.0:{port}  "
-          f"(exponha com: ngrok http {port})")
+    print(
+        f"[whatsapp] Servidor Flask em http://0.0.0.0:{port}  "
+        f"(exponha com: ngrok http {port})"
+    )
 
     app.run(host="0.0.0.0", port=port, debug=False)
 

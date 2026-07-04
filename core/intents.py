@@ -1,6 +1,3 @@
-"""
-Utilizado para mapear a mensagem do usuario e direcionar para o opção/menu correspondente.
-"""
 import re
 import unicodedata
 
@@ -16,27 +13,107 @@ NUMERO_INTENCAO = {
 }
 
 PALAVRAS_CHAVE = {
-    "saudacao":  ["ola", "oi", "bom dia", "boa tarde", "boa noite",
-                  "hello", "hi", "hey", "start", "iniciar"],
-    "menu":      ["menu", "opcoes", "options", "ajuda", "help", "voltar",
-                  "back", "inicio", "home"],
-    "centros":   ["centro", "centros", "endereco", "enderecos", "campus",
-                  "center", "address", "location", "onde fica"],
-    "sistemas_lista": ["siga", "moodle", "sigaa", "sistema", "sistemas",
-                       "system", "systems", "login", "acesso"],
-    "id_udesc":  ["id udesc", "id-udesc", "idudesc", "identidade",
-                  "credencial", "credential", "usuario"],
-    "sistemas_detalhe": ["sas", "office", "365", "biblioteca", "library",
-                         "email", "e-mail", "teams", "word", "excel",
-                         "ppc", "calendario", "calendar"],
-    "cpf":       ["cpf", "receita", "receita federal", "tax", "taxpayer",
-                  "documento", "document", "imposto"],
-    "tutoria":   ["tutoria", "tutor", "tutoring", "mentoria", "mentor",
-                  "acolhimento"],
-    "soe":       ["soe", "orientacao", "psicologico", "psychological",
-                  "guidance", "apoio", "support", "sae"],
-    "residencia": ["residencia", "moradia", "alojamento", "housing",
-                   "dormitory", "casa", "morar", "rent", "aluguel"],
+    "saudacao": [
+        "ola",
+        "oi",
+        "bom dia",
+        "boa tarde",
+        "boa noite",
+        "hello",
+        "hi",
+        "hey",
+        "start",
+        "iniciar",
+    ],
+    "menu": [
+        "menu",
+        "opcoes",
+        "options",
+        "ajuda",
+        "help",
+        "voltar",
+        "back",
+        "inicio",
+        "home",
+    ],
+    "centros": [
+        "centro",
+        "centros",
+        "endereco",
+        "enderecos",
+        "campus",
+        "center",
+        "address",
+        "location",
+        "onde fica",
+    ],
+    "sistemas_lista": [
+        "siga",
+        "moodle",
+        "sigaa",
+        "sistema",
+        "sistemas",
+        "system",
+        "systems",
+        "login",
+        "acesso",
+    ],
+    "id_udesc": [
+        "id udesc",
+        "id-udesc",
+        "idudesc",
+        "identidade",
+        "credencial",
+        "credential",
+        "usuario",
+    ],
+    "sistemas_detalhe": [
+        "sas",
+        "office",
+        "365",
+        "biblioteca",
+        "library",
+        "email",
+        "e-mail",
+        "teams",
+        "word",
+        "excel",
+        "ppc",
+        "calendario",
+        "calendar",
+    ],
+    "cpf": [
+        "cpf",
+        "receita",
+        "receita federal",
+        "tax",
+        "taxpayer",
+        "documento",
+        "document",
+        "imposto",
+    ],
+    "tutoria": ["tutoria", "tutor", "tutoring", "mentoria", "mentor", "acolhimento"],
+    "soe": [
+        "soe",
+        "orientacao",
+        "psicologico",
+        "psychological",
+        "guidance",
+        "apoio",
+        "support",
+        "sae",
+    ],
+    "residencia": [
+        "residencia",
+        "moradia",
+        "alojamento",
+        "housing",
+        "dormitory",
+        "casa",
+        "morar",
+        "rent",
+        "aluguel",
+    ],
 }
 
 IDIOMA = {
@@ -54,29 +131,29 @@ def normalizar(texto):
 
 
 def detectar_idioma(texto):
-    t = normalizar(texto)
+    texto_normalizado = normalizar(texto)
     for lang, termos in IDIOMA.items():
-        if t in [normalizar(x) for x in termos]:
+        if texto_normalizado in [normalizar(x) for x in termos]:
             return lang
     return None
 
 
 def detectar_intencao(texto):
-    t = normalizar(texto)
+    texto_normalizado = normalizar(texto)
 
-    if t in NUMERO_INTENCAO:
-        return NUMERO_INTENCAO[t]
+    if texto_normalizado in NUMERO_INTENCAO:
+        return NUMERO_INTENCAO[texto_normalizado]
 
     for intent in ("saudacao", "menu"):
-        for kw in PALAVRAS_CHAVE[intent]:
-            if normalizar(kw) in t:
+        for palavra_chave in PALAVRAS_CHAVE[intent]:
+            if normalizar(palavra_chave) in texto_normalizado:
                 return intent
 
     for intent, termos in PALAVRAS_CHAVE.items():
         if intent in ("saudacao", "menu"):
             continue
-        for kw in termos:
-            if normalizar(kw) in t:
+        for palavra_chave in termos:
+            if normalizar(palavra_chave) in texto_normalizado:
                 return intent
 
     return None
