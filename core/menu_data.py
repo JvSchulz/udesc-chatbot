@@ -1,30 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-menu_data.py
-------------
-Base de conhecimento do chatbot: conteudo dos menus exigidos pela Tabela 1 do
-enunciado, em portugues (pt) e ingles (en).
-
-IMPORTANTE PARA A BANCA / EQUIPE
---------------------------------
-Os dados abaixo foram coletados do portal oficial da UDESC (www.udesc.br) em
-junho/2026. Os campos marcados com "" devem ser confirmados com a
-equipe de tutoria do CCT antes da entrega, pois enderecos e telefones de alguns
-centros podem mudar. O enunciado autoriza entrevistas com a tutoria justamente
-para isso (Secao "Observacao" da Tabela 1).
-
-A estrutura e propositalmente um dicionario "burro" (so dados). Toda a logica de
-navegacao fica em intents.py / bot_engine.py. Isso mantem o conteudo separado do
-codigo (principio de separacao de responsabilidades), o que facilita traduzir,
-auditar e atualizar as informacoes sem mexer na logica do bot.
-"""
-
-# ---------------------------------------------------------------------------
-# 1) CENTROS DE ENSINO DA UDESC
-# Fonte: https://www.udesc.br/sobreoscentros (12 centros oficiais)
-# O CCT (onde o trabalho e apresentado) esta com a ficha completa; os demais
-# trazem nome, cidade e URL oficial (padrao real udesc.br/<sigla>).
-# ---------------------------------------------------------------------------
 CENTROS = {
     "CCT": {
         "nome": "CCT - Centro de Ciencias Tecnologicas",
@@ -114,14 +87,10 @@ CENTROS = {
     },
 }
 
-# Ordem fixa de exibicao (CCT primeiro por ser o centro da apresentacao).
 ORDEM_CENTROS = ["CCT", "ESAG", "CAV", "CEART", "CEFID", "FAED",
                  "CEAVI", "CEO", "CEPLAN", "CERES", "CESFI", "CEAD"]
 
 
-# ---------------------------------------------------------------------------
-# 2) SISTEMAS DA UDESC (item 2 e 4 da Tabela 1)
-# ---------------------------------------------------------------------------
 SISTEMAS = {
     "pt": {
         "SIGA": "SIGA - Sistema de gestao academica: consulta de notas, "
@@ -160,10 +129,6 @@ ORDEM_SISTEMAS = ["SIGA", "Moodle", "SIGAA", "Site UDESC", "SAS",
                   "Office 365", "Biblioteca"]
 
 
-# ---------------------------------------------------------------------------
-# 3) TEXTOS DOS DEMAIS ITENS DA TABELA 1 (3, 5, 6, 7, 8)
-# Bilingue. Conteudo institucional baseado no portal UDESC e na CCT.
-# ---------------------------------------------------------------------------
 TEXTOS = {
     "pt": {
         "id_udesc": (
