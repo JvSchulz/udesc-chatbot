@@ -1,30 +1,50 @@
 import sys
 import time
 import requests
+import urllib3
+import json
+import logging
 
 try:
     from core import bot_engine
     import config
 except ImportError:
     import os
+
     sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     from core import bot_engine
     import config
 
 API = "https://api.telegram.org/bot{token}/{method}"
 
+
 def _chamar(method, token, **params):
     url = API.format(token=token, method=method)
+
+    http = urllib3.PoolManager()
     try:
-        r = requests.get(url, params=params, timeout=40)
-        return r.json()
+        request = http.request(
+            "GET", url, fields=params, preload_content=False, timeout=40.0
+        )
+        socket_ativo = getattr(request.connection, "sock", None)
+        
+        if socket_ativo:
+            ip_origem, porta_origem = socket_ativo.getsockname()
+            logging.info(f"Telegram - Origem: {ip_origem}:{porta_origem}")
+
+        dados = json.loads(request.data.decode("utf-8"))
+        request.release_conn()
+
+        return dados
     except requests.RequestException as e:
         print(f"[telegram] erro de rede: {e}")
         return None
 
 
 def enviar_mensagem(token, chat_id, texto):
-    resp = _chamar("sendMessage", token, chat_id=chat_id, text=texto, parse_mode="Markdown")
+    resp = _chamar(
+        "sendMessage", token, chat_id=chat_id, text=texto, parse_mode="Markdown"
+    )
     if resp and not resp.get("ok"):
         print(f"[telegram] Markdown falhou, reenviando sem formatacao")
         resp = _chamar("sendMessage", token, chat_id=chat_id, text=texto)
@@ -41,8 +61,10 @@ def run(token=None):
     if not me or not me.get("ok"):
         print("ERRO: token invalido ou sem rede. Resposta:", me)
         return
-    print(f"[telegram] Bot @{me['result'].get('username')} online. "
-          f"Aguardando mensagens (Ctrl+C para sair)...")
+    print(
+        f"[telegram] Bot @{me['result'].get('username')} online. "
+        f"Aguardando mensagens (Ctrl+C para sair)..."
+    )
 
     offset = None
     while True:

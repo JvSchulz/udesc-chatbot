@@ -1,4 +1,3 @@
-
 MENU_PRINCIPAL = {
     "pt": (
         "1 - Enderecos dos Centros da UDESC\n"
@@ -29,7 +28,7 @@ MENU_PRINCIPAL = {
 UI = {
     "pt": {
         "welcome": (
-            "Ola! Bem-vindo(a) a UDESC! \U0001F44B\n"
+            "Ola! Bem-vindo(a) a UDESC! \U0001f44b\n"
             "Sou o assistente virtual para estudantes de intercambio. "
             "Posso ajudar com sistemas, documentos, tutoria e mais.\n"
         ),
@@ -37,17 +36,17 @@ UI = {
         "choose_center": "Escolha um centro digitando o numero:",
         "choose_system": "Escolha um sistema digitando o numero:",
         "center_back": "Digite 'menu' para voltar ao menu principal.",
-        "lang_changed": "Idioma alterado para Portugues. \U0001F1E7\U0001F1F7",
+        "lang_changed": "Idioma alterado para Portugues. \U0001f1e7\U0001f1f7",
         "invalid_option": "Opcao invalida. Escolha um numero da lista.",
         "not_understood": (
-            "Desculpe, nao entendi. \U0001F914\n"
+            "Desculpe, nao entendi. \U0001f914\n"
             "Digite 'menu' para ver as opcoes, ou um numero de 1 a 8."
         ),
         "llm_prefix": "",
     },
     "en": {
         "welcome": (
-            "Hello! Welcome to UDESC! \U0001F44B\n"
+            "Hello! Welcome to UDESC! \U0001f44b\n"
             "I'm the virtual assistant for exchange students. I can help with "
             "systems, documents, tutoring and more.\n"
         ),
@@ -55,10 +54,10 @@ UI = {
         "choose_center": "Choose a center by typing its number:",
         "choose_system": "Choose a system by typing its number:",
         "center_back": "Type 'menu' to go back to the main menu.",
-        "lang_changed": "Language changed to English. \U0001F1FA\U0001F1F8",
+        "lang_changed": "Language changed to English. \U0001f1fa\U0001f1f8",
         "invalid_option": "Invalid option. Please choose a number from the list.",
         "not_understood": (
-            "Sorry, I didn't understand. \U0001F914\n"
+            "Sorry, I didn't understand. \U0001f914\n"
             "Type 'menu' to see the options, or a number from 1 to 8."
         ),
         "llm_prefix": "",
