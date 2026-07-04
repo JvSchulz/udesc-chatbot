@@ -1,4 +1,3 @@
-
 CENTROS = {
     "CCT": {
         "nome": "CCT - Centro de Ciencias Tecnologicas",
@@ -11,71 +10,71 @@ CENTROS = {
     "ESAG": {
         "nome": "ESAG - Centro de Ciencias da Administracao e Socioeconomicas",
         "cidade": "Florianopolis/SC",
-        "endereco": "Consultar no site oficial",  # VERIFICAR
-        "telefone": "(48) 3664-8000",  # VERIFICAR (telefone geral da UDESC)
+        "endereco": "Av. Me. Benvenuta, 2037 - Itacorubi, Florianópolis - SC, 88035-001",
+        "telefone": "(48) 3664-8200",
         "url": "https://www.udesc.br/esag",
     },
     "CAV": {
         "nome": "CAV - Centro de Ciencias Agroveterinarias",
         "cidade": "Lages/SC",
-        "endereco": "Consultar no site oficial",  # VERIFICAR
-        "telefone": "Consultar no site oficial",  # VERIFICAR
+        "endereco": "Av. Luiz de Camões, 2090 - Conta Dinheiro, Lages - SC, 88520-000",
+        "telefone": "(49) 3289-9100",
         "url": "https://www.udesc.br/cav",
     },
     "CEART": {
         "nome": "CEART - Centro de Artes, Design e Moda",
         "cidade": "Florianopolis/SC",
-        "endereco": "Consultar no site oficial",  # VERIFICAR
-        "telefone": "Consultar no site oficial",  # VERIFICAR
+        "endereco": "Av. Me. Benvenuta, 1907 - Itacorubi, Florianópolis - SC, 88035-901",  
+        "telefone": "(48) 3664-8300",  
         "url": "https://www.udesc.br/ceart",
     },
     "CEFID": {
         "nome": "CEFID - Centro de Ciencias da Saude e do Esporte",
         "cidade": "Florianopolis/SC",
-        "endereco": "Consultar no site oficial",  # VERIFICAR
-        "telefone": "Consultar no site oficial",  # VERIFICAR
+        "endereco": "R. Pascoal Simone, 358 - Coqueiros, Florianópolis - SC, 88080-350",  
+        "telefone": "(48) 3664-8600",  
         "url": "https://www.udesc.br/cefid",
     },
     "FAED": {
         "nome": "FAED - Centro de Ciencias Humanas e da Educacao",
         "cidade": "Florianopolis/SC",
-        "endereco": "Consultar no site oficial",  # VERIFICAR
-        "telefone": "Consultar no site oficial",  # VERIFICAR
+        "endereco": "Servidão Caminho do Pôrto, 1 - Itacorubi, Florianópolis - SC, 88034-257",  
+        "telefone": "(48) 3321-8500",  
         "url": "https://www.udesc.br/faed",
     },
     "CEAVI": {
         "nome": "CEAVI - Centro de Educacao Superior do Alto Vale do Itajai",
         "cidade": "Ibirama/SC",
-        "endereco": "Consultar no site oficial",  # VERIFICAR
+        "endereco": "R. Dr. Getúlio Vargas, 2822 - Bela Vista, Ibirama - SC, 89140-000",  
         "telefone": "(47) 3357-8484",
         "url": "https://www.udesc.br/ceavi",
     },
     "CEO": {
         "nome": "CEO - Centro de Educacao Superior do Oeste",
         "cidade": "Chapeco/SC",
-        "endereco": "Consultar no site oficial",  # VERIFICAR
-        "telefone": "Consultar no site oficial",  # VERIFICAR
+        "endereco": "R. Beloni Trombeta Zanin, 680E - Santo Antônio, Chapecó - SC, 89815-630",  
+        "telefone": "(49) 2049-9524",  
         "url": "https://www.udesc.br/ceo",
     },
     "CEPLAN": {
         "nome": "CEPLAN - Centro de Educacao do Planalto Norte",
         "cidade": "Sao Bento do Sul/SC",
-        "endereco": "Consultar no site oficial",  # VERIFICAR
-        "telefone": "Consultar no site oficial",  # VERIFICAR
+        "endereco": "R. Luiz Fernando Hastreiter, 180 - Centenário, São Bento do Sul - SC, 89283-081",  
+        "telefone": "(47) 3647-0074",  
         "url": "https://www.udesc.br/ceplan",
     },
     "CERES": {
         "nome": "CERES - Centro de Educacao Superior da Regiao Sul",
         "cidade": "Laguna/SC",
-        "endereco": "Consultar no site oficial",  # VERIFICAR
-        "telefone": "Consultar no site oficial",  # VERIFICAR
+        "endereco": "R. Cel. Fernandes Martins, 270 - Progresso, Laguna - SC, 88790-000",  
+        "telefone": "(48) 3647-7900",  
         "url": "https://www.udesc.br/ceres",
     },
     "CESFI": {
         "nome": "CESFI - Centro de Educacao Superior da Foz do Itajai",
         "cidade": "Balneario Camboriu/SC",
-        "endereco": "Consultar no site oficial",  # VERIFICAR
-        "telefone": "Consultar no site oficial",  # VERIFICAR
+        "endereco": "Avenida Lourival Cesario Pereira, s/n Edificio Alcides Abreu - Nova Esperança, Balneário Camboriú - SC, 88336-275",  
+        "telefone": "(47) 3398-6592",  
         "url": "https://www.udesc.br/cesfi",
     },
     "CEAD": {
@@ -83,7 +82,7 @@ CENTROS = {
         "cidade": "Florianopolis/SC",
         "endereco": "Av. Madre Benvenuta, 2007 - Itacorubi - "
                     "Florianopolis/SC - CEP 88.035-901",
-        "telefone": "(48) 3664-8402",
+        "telefone": "(48) 3664-8400",
         "url": "https://www.udesc.br/cead",
     },
 }
@@ -96,34 +95,34 @@ SISTEMAS = {
     "pt": {
         "SIGA": "SIGA - Sistema de gestao academica: consulta de notas, "
                 "faltas, matriculas e situacao academica. Acesso com o ID "
-                "UDESC. https://www.udesc.br (busque por 'SIGA').",
-        "Moodle": "Moodle - Ambiente Virtual de Aprendizagem (AVA): "
+                "UDESC. https://siga.udesc.br.",
+        "Moodle": "Moodle: "
                   "disciplinas, materiais, entrega de exercicios e provas "
-                  "online. Acesso com o ID UDESC.",
+                  "online. Acesso com o ID UDESC. https://www.udesc.br/<SEU_CENTRO>/calouros/moodle",
         "SIGAA": "SIGAA - Sistema de gestao academica usado em alguns modulos "
-                 "da UDESC. Acesso com o ID UDESC.",
+                 "da UDESC. Acesso com o ID UDESC. https://www.udesc.br/sistema/sigaa",
         "Site UDESC": "Site UDESC - Informacoes institucionais: Plano de "
-                      "Curso (PPC), corpo docente, calendario academico.",
-        "SAS": "SAS - Agendamento e verificacao de reservas de salas.",
+                      "Curso (PPC), corpo docente, calendario academico. https://www.udesc.br",
+        "SAS": "SAS - Agendamento e verificacao de reservas de salas. https://sas.sistemas.udesc.br",
         "Office 365": "Office 365 - E-mail institucional e aplicativos "
-                      "Microsoft (Word, Excel, Teams, etc.).",
+                      "Microsoft (Word, Excel, Teams, etc.). https://www.udesc.br/sistemas/office365",
         "Biblioteca": "Biblioteca online - Busca de livros e repositorio de "
-                      "TCCs, dissertacoes e teses (Pergamum/BU UDESC).",
+                      "TCCs, dissertacoes e teses (Pergamum/BU UDESC). https://www.udesc.br/bu",
     },
     "en": {
         "SIGA": "SIGA - Academic management system: grades, absences, "
-                "enrollment and academic status. Login with your UDESC ID.",
+                "enrollment and academic status. Login with your UDESC ID. https://siga.udesc.br",
         "Moodle": "Moodle - Virtual Learning Environment: courses, materials, "
-                  "assignment submission and online exams. Login with UDESC ID.",
+                  "assignment submission and online exams. Login with UDESC ID. https://www.udesc.br/<SEU_CENTRO>/calouros/moodle",
         "SIGAA": "SIGAA - Academic management system used in some UDESC "
-                 "modules. Login with your UDESC ID.",
+                 "modules. Login with your UDESC ID. https://www.udesc.br/sistema/sigaa",
         "Site UDESC": "UDESC website - Institutional information: course plan "
-                      "(PPC), faculty, academic calendar.",
-        "SAS": "SAS - Room booking and reservation check.",
+                      "(PPC), faculty, academic calendar. https://www.udesc.br",
+        "SAS": "SAS - Room booking and reservation check. https://sas.sistemas.udesc.br",
         "Office 365": "Office 365 - Institutional e-mail and Microsoft apps "
                       "(Word, Excel, Teams, etc.).",
-        "Biblioteca": "Online library - Book search and repository of theses "
-                      "and dissertations (Pergamum/UDESC Library).",
+        "Biblioteca": "Online library - Book search and repository of theses https://www.udesc.br/sistemas/office365"
+                      "and dissertations (Pergamum/UDESC Library). https://www.udesc.br/bu",
     },
 }
 ORDEM_SISTEMAS = ["SIGA", "Moodle", "SIGAA", "Site UDESC", "SAS",
@@ -134,12 +133,13 @@ TEXTOS = {
     "pt": {
         "id_udesc": (
             "*Como obter o ID UDESC*\n"
-            "1) Acesse o portal de identidade da UDESC (id.udesc.br ou link "
-            "indicado pela secretaria academica do seu centro).\n"
-            "2) Informe seu numero de matricula e dados pessoais.\n"
-            "3) Crie sua senha e valide o e-mail institucional.\n"
-            "Em caso de duvida, procure a Secretaria Academica ou a equipe "
-            "de tutoria do seu centro."
+            "O ID UDESC e a sua identidade unica de acesso aos sistemas.\n"
+            "1) Acesse o site: Entre no portal id.udesc.br. \n"
+            "2) Respeite o prazo: Faça isso a partir do dia seguinte à sua matrícula. \n"
+            "3) Inicie o processo: Clique na opção 'Primeiro acesso' \n"
+            "4) Informe seus dados: Digite apenas os números do seu CPF. \n"
+            "5) Confirme no e-mail: Siga as instruções enviadas para o seu e-mail cadastrado. \n"
+            "Em caso de duvida, procure a Secretaria Academica ou a equipe de tutoria do seu centro."
         ),
         "cpf": (
             "*Voce precisa de um CPF*\n"
@@ -156,10 +156,10 @@ TEXTOS = {
         ),
         "tutoria": (
             "*Equipe de Tutoria Academica*\n"
-            "A tutoria acolhe e orienta estudantes,inclusive estrangeiros.\n"
+            "A tutoria acolhe e orienta estudantes (inclusive estrangeiros).\n"
             "CCT - Tutoria Academica:\n"
-            "Site: https://www.udesc.br/cct/tutoriaacademica\n"
-            "Equipe: https://www.udesc.br/cct/tutoriaacademica/equipe\n"
+            "Site: https://www.udesc.br/cct/tutoriaacademica \n"
+            "Equipe: https://www.udesc.br/cct/tutoriaacademica/equipe \n"
             "E-mail: tutoria.cct@udesc.br\n"
             "Supervisora TADS: Profa. Debora Cabral Nazario\n"
             "Supervisora Ciencia da Computacao: Profa. Luciana Rita Guedes"
@@ -170,8 +170,7 @@ TEXTOS = {
             "estudante.\n"
             "Procure a Secretaria de Assuntos Estudantis (SAE) ou a "
             "coordenacao do seu centro para horarios e agendamento.\n"
-            "Site institucional: https://www.udesc.br (busque por 'SAE' ou "
-            "'SOE')."
+            "Site institucional: https://www.udesc.br/cct/soe."  
         ),
         "residencia": (
             "*Residencia Estudantil / Moradia*\n"
