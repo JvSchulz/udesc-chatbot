@@ -17,6 +17,9 @@ except ImportError:
 
 API = "https://api.telegram.org/bot{token}/{method}"
 
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+)
 
 def _chamar(method, token, **params):
     url = API.format(token=token, method=method)
@@ -27,10 +30,12 @@ def _chamar(method, token, **params):
             "GET", url, fields=params, preload_content=False, timeout=40.0
         )
         socket_ativo = getattr(request.connection, "sock", None)
-        
+
         if socket_ativo:
-            ip_origem, porta_origem = socket_ativo.getsockname()
-            logging.info(f"Telegram - Origem: {ip_origem}:{porta_origem}")
+            ip_origem, porta_origem, *_ = socket_ativo.getsockname()
+            ip_destino, porta_destino, *_ = socket_ativo.getpeername()
+            logging.info(f"Telegram - Local: IP {ip_origem} / Porta {porta_origem}")
+            logging.info(f"Telegram - Externo: IP {ip_destino} / Porta {porta_destino}")
 
         dados = json.loads(request.data.decode("utf-8"))
         request.release_conn()
