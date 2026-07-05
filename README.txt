@@ -1,9 +1,7 @@
 # Instalação e Execução do Projeto
 
 ## Requisitos
-- Python 3.10 ou superior   (verifique: python3 --version)
-- pip
-- ngrok (apenas para o canal WhatsApp): https://ngrok.com/download
+- Python 3.10 ou superior
 - Conta gratuita no Twilio (apenas para o canal WhatsApp)
 - Token de bot do Telegram (gratuito, via @BotFather)
 

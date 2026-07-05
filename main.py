@@ -34,6 +34,5 @@ def main():
         for p in processos:
             p.terminate()
 
-
 if __name__ == "__main__":
     main()
