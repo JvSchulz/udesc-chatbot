@@ -23,12 +23,9 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET"])
 def home():
-    ip_destino_local = request.environ.get("SERVER_NAME")
-    porta_destino = request.environ.get("SERVER_PORT")
-    ip_origem = request.remote_addr
-    porta_origem = request.environ.get("REMOTE_PORT")
-    logging.info(f"Telegram - Local: IP {ip_origem} / Porta {porta_origem}")
-    logging.info(f"Telegram - Externo: IP {ip_destino_local} / Porta {porta_destino}")
+    ip_destino = request.remote_addr
+    porta_destino = request.environ.get("REMOTE_PORT")
+    logging.info(f"Whatsapp - Externo: IP {ip_destino} / Porta {porta_destino}")
     return "Chatbot UDESC Intercambio (WhatsApp/Twilio) esta no ar.", 200
 
 
@@ -36,6 +33,10 @@ def home():
 def whatsapp():
     texto = request.form.get("Body", "")
     remetente = request.form.get("From", "desconhecido")
+    ip_destino = request.remote_addr
+    porta_destino = request.environ.get("REMOTE_PORT")
+
+    logging.info(f"Whatsapp - Externo: IP {ip_destino} / Porta {porta_destino}")
 
     resposta = bot_engine.processar_mensagem(f"wa:{remetente}", texto)
 
