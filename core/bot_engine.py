@@ -64,12 +64,6 @@ def _resp_boas_vindas(lang):
 
 
 def processar_mensagem(id_usuario, texto):
-    """
-    Recebe a mensagem de qualquer canal e devolve a resposta (string).
-    id_usuario: identificador unico do usuario NO CANAL
-    texto     : conteudo textual enviado pelo usuario.
-    """
-
     if texto is None:
         texto = ""
     sessao = _sessao(id_usuario)

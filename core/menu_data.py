@@ -96,9 +96,10 @@ SISTEMAS = {
         "SIGA": "SIGA - Sistema de gestao academica: consulta de notas, "
                 "faltas, matriculas e situacao academica. Acesso com o ID "
                 "UDESC. https://siga.udesc.br.",
-        "Moodle": "Moodle: "
-                  "disciplinas, materiais, entrega de exercicios e provas "
-                  "online. Acesso com o ID UDESC. https://www.udesc.br/<SEU_CENTRO>/calouros/moodle",
+        "Moodle": "Moodle: disciplinas, materiais, entrega de exercicios e provas online."
+                  "Acesse com o ID UDESC em: https://moodle.udesc.br"
+                  "(Cada centro tem uma pagina de ajuda em: www.udesc.br/SEUCENTRO/calouros/moodle"
+                  "ex.: www.udesc.br/esag/calouros/moodle, www.udesc.br/cct/calouros/moodle)",
         "SIGAA": "SIGAA - Sistema de gestao academica usado em alguns modulos "
                  "da UDESC. Acesso com o ID UDESC. https://www.udesc.br/sistema/sigaa",
         "Site UDESC": "Site UDESC - Informacoes institucionais: Plano de "
